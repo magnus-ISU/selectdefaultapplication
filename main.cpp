@@ -1,4 +1,3 @@
-#include "selectdefaultapplication.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QMimeType>
@@ -17,5 +16,5 @@ int main(int argc, char *argv[])
 	qDebug() << "Mime type of 'application/pkcs12'  :" << withoutX.name();
 	qDebug() << "Mime type of 'application/x-pkcs12':" << withX.name();
 
-	return a.exec();
+	return withoutX.name() == withX.name();
 }
